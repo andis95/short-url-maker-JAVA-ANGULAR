@@ -1,0 +1,14 @@
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #465bba 0%, #4e9168 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
