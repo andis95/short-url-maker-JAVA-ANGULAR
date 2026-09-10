@@ -1,0 +1,32 @@
+<style>
+</style>
+
+<div class="div-make-short">
+  <div>
+    <input 
+      type="text" 
+      [(ngModel)]="longUrl" 
+      placeholder="Input your https url here"
+      (keyup.enter)="shortenUrl()"
+    />
+    <button type="button" (click)="shortenUrl()" [disabled]="loading">
+      {{ loading ? 'Loading...' : 'Shorten' }}
+    </button>
+  </div>
+
+  @if(error){
+    {{error}}
+  }
+
+  @if(shortUrl){
+    <p>Result:</p>
+    <div class="url-container">
+      <a [href]="shortUrl" target="_blank">
+        {{ shortUrl }}
+      </a>
+      <button type="button" (click)="copyUrl()">
+        Copy
+      </button>
+    </div>
+  }
+</div>
